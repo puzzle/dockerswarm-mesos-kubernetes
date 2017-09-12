@@ -3,7 +3,7 @@ title: Mesos, Docker Swarm and Kubernetes
 ---
 
 <!--section -->
-# Mesos<br>Docker Swarm<br>Kubernetes
+# Docker Swarm<br>Mesos<br>Kubernetes
 
 <!-- .slide: class="master01" -->
 
@@ -53,9 +53,6 @@ title: Mesos, Docker Swarm and Kubernetes
 
 ## Kubernetes
 
-* Modular, e.g. supports different networking models
-* Rich tool and library eco system
-* Developer-centric
 * High level of portability (>5 public providers)
 * Cluster federation (beta)
 * Suitable for medium to large clusters
@@ -63,16 +60,26 @@ title: Mesos, Docker Swarm and Kubernetes
 
 ---
 
-## Things to look out for
+## Things to consider
 
 * Business requirements match
 * Product roadmap/future
 * Networking model
 * Storage types and management
+
+---
+
+## Things to consider
+
 * Monitoring and log aggregation support
 * Engineering overhead, e.g. for backup, monitoring, automation
 * Operations and maintenance overhead
 * Complexity of cluster upgrades
+
+---
+
+## Things to consider
+
 * Vendor/provider lock-in
 * Availability of consulting resources
 * Community size
@@ -81,19 +88,25 @@ title: Mesos, Docker Swarm and Kubernetes
 
 ## Resources
 
-* https://mesosphere.com/blog/docker-vs-kubernetes-vs-apache-mesos/
+* [Docker vs. Kubernetes vs. Apache Mesos<br>(Mesosphere Blog)](https://mesosphere.com/blog/docker-vs-kubernetes-vs-apache-mesos/)
+* [Your Container Orchestration Needs<br>(Kubernauts Blog)](https://blog.kubernauts.io/your-container-orchestration-needs-kubernetes-vs-mesos-vs-docker-swarm-1efa9acb69be)
 * [Cloud Native Computing Foundation](https://www.cncf.io/)
-* https://blog.kubernauts.io/your-container-orchestration-needs-kubernetes-vs-mesos-vs-docker-swarm-1efa9acb69be
+
+---
+
+## OpenShift
+
+* Developed by Red Hat
+* Extends Kubernetes with:
+  * Additional security
+  * Certified base images
 
 ---
 
 ## OpenShift
 
 * Extends Kubernetes with:
-  * Additional security
-  * Certified base images
   * Build, deployment and scaling automation
   * CI/CD pipelines
   * Application centric networking
   * Dynamic storage provisioning
-* Developed by Red Hat

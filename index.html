@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Mesos, Docker Swarm and Kubernetes</title>
+        <link rel="stylesheet" href="./css/reveal.css">
+        <link rel="stylesheet" href="./theme/puzzle.css" id="theme">
+        <link rel="stylesheet" href="./css/highlight/zenburn.css">
+        <link rel="stylesheet" href="./css/print/paper.css" type="text/css" media="print">
+
+    </head>
+    <body>
+
+        <div class="reveal">
+            <div class="slides"><section  data-markdown><script type="text/template">
+
+<!--section -->
+# Docker Swarm<br>Mesos<br>Kubernetes
+
+<!-- .slide: class="master01" -->
+</script></section><section  data-markdown><script type="text/template">
+## Docker Swarm
+
+* Is a clustering tool for Docker containers
+* Developed by Docker, Inc.
+* Extends Docker to multiple hosts
+</script></section><section  data-markdown><script type="text/template">
+## Docker Swarm
+
+* Docker-centric
+* Suitable for small clusters
+* Low complexity
+</script></section><section  data-markdown><script type="text/template">
+## Mesos
+
+* Is a cluster manager
+* Developed by the Apache Software Foundation
+* Requires Marathon or Kubernetes to run containers
+* DC/OS is a Mesos distribution including Marathon, developed by Mesosphere
+</script></section><section  data-markdown><script type="text/template">
+## Mesos
+
+* Supports mixed workloads: legacy, cloud-native, big data
+* Suitable for large to very large clusters
+* High complexity
+</script></section><section  data-markdown><script type="text/template">
+## Kubernetes
+
+* Is a container orchestrator
+* Developed by Cloud Native Computing Foundation (Google, Red Hat, CoreOS, Microsoft, IBM, ...)
+* Builds on 15 years of container experience at Google
+* Supports Docker, Rkt, Windows Server Containers (Alpha)
+</script></section><section  data-markdown><script type="text/template">
+## Kubernetes
+
+* High level of portability (>5 public providers)
+* Cluster federation (beta)
+* Suitable for medium to large clusters
+* Medium complexity
+</script></section><section  data-markdown><script type="text/template">
+## Things to consider
+
+* Business requirements match
+* Product roadmap/future
+* Networking model
+* Storage types and management
+</script></section><section  data-markdown><script type="text/template">
+## Things to consider
+
+* Monitoring and log aggregation support
+* Engineering overhead, e.g. for backup, monitoring, automation
+* Operations and maintenance overhead
+* Complexity of cluster upgrades
+</script></section><section  data-markdown><script type="text/template">
+## Things to consider
+
+* Vendor/provider lock-in
+* Availability of consulting resources
+* Community size
+</script></section><section  data-markdown><script type="text/template">
+## Resources
+
+* [Docker vs. Kubernetes vs. Apache Mesos<br>(Mesosphere Blog)](https://mesosphere.com/blog/docker-vs-kubernetes-vs-apache-mesos/)
+* [Your Container Orchestration Needs<br>(Kubernauts Blog)](https://blog.kubernauts.io/your-container-orchestration-needs-kubernetes-vs-mesos-vs-docker-swarm-1efa9acb69be)
+* [Cloud Native Computing Foundation](https://www.cncf.io/)
+</script></section><section  data-markdown><script type="text/template">
+## OpenShift
+
+* Developed by Red Hat
+* Extends Kubernetes with:
+  * Additional security
+  * Certified base images
+</script></section><section  data-markdown><script type="text/template">
+## OpenShift
+
+* Extends Kubernetes with:
+  * Build, deployment and scaling automation
+  * CI/CD pipelines
+  * Application centric networking
+  * Dynamic storage provisioning
+</script></section></div>
+        </div>
+
+        <script src="./lib/js/head.min.js"></script>
+        <script src="./js/reveal.js"></script>
+
+        <script>
+            function extend() {
+              var target = {};
+              for (var i = 0; i < arguments.length; i++) {
+                var source = arguments[i];
+                for (var key in source) {
+                  if (source.hasOwnProperty(key)) {
+                    target[key] = source[key];
+                  }
+                }
+              }
+              return target;
+            }
+
+            // Optional libraries used to extend on reveal.js
+            var deps = [
+              { src: './lib/js/classList.js', condition: function() { return !document.body.classList; } },
+              { src: './plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+              { src: './plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+              { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+              { src: './plugin/zoom-js/zoom.js', async: true },
+              { src: './plugin/notes/notes.js', async: true },
+              { src: './plugin/math/math.js', async: true }
+            ];
+
+            // default options to init reveal.js
+            var defaultOptions = {
+              controls: true,
+              progress: true,
+              history: true,
+              center: true,
+              transition: 'default', // none/fade/slide/convex/concave/zoom
+              dependencies: deps
+            };
+
+            // options from URL query string
+            var queryOptions = Reveal.getQueryHash() || {};
+
+            var options = {};
+            options = extend(defaultOptions, options, queryOptions);
+            Reveal.initialize(options);
+        </script>
+        
+    </body>
+</html>

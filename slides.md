@@ -20,8 +20,8 @@ title: Mesos, Docker Swarm and Kubernetes
 ## Docker Swarm
 
 * Docker-centric
-* Suitable for small clusters
 * Low complexity
+* Suitable for small clusters
 
 ---
 
@@ -37,8 +37,8 @@ title: Mesos, Docker Swarm and Kubernetes
 ## Mesos
 
 * Supports mixed workloads: legacy, cloud-native, big data
-* Suitable for large to very large clusters
 * High complexity
+* Suitable for large to very large clusters
 
 ---
 
@@ -55,8 +55,8 @@ title: Mesos, Docker Swarm and Kubernetes
 
 * High level of portability (>5 public providers)
 * Cluster federation (beta)
-* Suitable for medium to large clusters
 * Medium complexity
+* Suitable for medium to large clusters
 
 ---
 
